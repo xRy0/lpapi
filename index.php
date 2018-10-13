@@ -22,7 +22,7 @@
          die("<h1>Error 901</h1> Something's missing...");
        }
        // выполняем операции с базой данных
-        $query ="SELECT * FROM users WHERE id = ".$_GET['id'];
+        $query ="SELECT id, username, nick, age, google_id FROM users WHERE id = ".$_GET['id'];
         $result = mysqli_query($link, $query) or die("<h1>Error 902</h1> MySQL Error.");
         $row = mysqli_fetch_assoc($result);
         if($result)
